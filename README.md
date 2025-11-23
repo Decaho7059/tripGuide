@@ -1,11 +1,25 @@
-![Banner](./demo/banner.png)
+# 🌍 TripGuide — Explore The World in One App  
 
-# 🧭 TripGuide — Flutter Travel App
+> **Application Flutter moderne permettant d’explorer des destinations, filtrer par continent/pays, gérer ses favoris et personnaliser son profil (avatar + nom).**
 
-**Une application mobile moderne de découverte de destinations, avec système de favoris, filtres, recherche intelligente, authentification personnalisée et avatars dynamiques.**
 ---
 
-## 🌟 Aperçu du projet
+
+## 🧭 Aperçu de l’application
+
+<img src="images/avatar/boy.png" width="100" align="left" />
+
+**TripGuide** est une travel-app moderne développée en **Flutter/Dart**, combinant :
+- un système **Login / Sign up** complet,
+- un **choix d’avatar dynamique** (les avatars sont chargés automatiquement depuis `images/avatar/`),
+- des pages animées et un design premium,
+- un système de **favoris avancé** (tri, ajout, suppression multiple),
+- une page détail immersive avec **"Read more"**, et des **tours recommandés**,
+- une fonctionnalité **Random Destination 🎲**.
+
+Cette application offre une expérience fluide, intuitive, et visuellement élégante.
+
+---
 
  **Démo de l’application :**
 
@@ -17,77 +31,60 @@
 Navigation + Recherche + Favoris
 
 ![Demo](./demo/tripGuide_app.gif)
+
 ---
+
 ## ✨ Fonctionnalités principales
-🔐 Authentification
 
-Connexion & inscription fluides
+### 🔐 Authentification & Profil
+- Connexion / Inscription
+- Choix du genre (Homme / Femme)
+- Sélection d’un avatar (Naruto, personnages animés, etc.)
+- Avatar modifiable à tout moment
+- Nettoyage intelligent du nom (autorise lettres, chiffres, @ et .)
 
-Choix du genre (Homme / Femme)
+### 🏠 Accueil
+- Message personnalisé : *Hello, Username*
+- Recherche intelligente (ville ou pays)
+- Message d’erreur si aucun résultat
+- Filtrage dynamique par continent
+- Tri : pays, continent, aucun tri
+- Listing animé et responsive
 
-Sélection d’un avatar parmi tous les fichiers d’un dossier
+### ❤️ Favoris
+- Ajouter / retirer une destination
+- Sélection multiple
+- Suppression groupée
+- Tri intelligent : ville / pays / continent / note
+- Ajout ou retrait via bottom-sheet
+- Stocké via `ValueNotifier` (réactif et instantané)
 
-Nom d’utilisateur nettoyé (sans caractères spéciaux)
+### 📄 Page Détails
+- Hero animation
+- Flag + pays + reviews + rating
+- Description courte + longue (Read More)
+- Section "Upcoming tours"
+- Liste de destinations mélangées
+- Random destination (boutton 🎲)
+
+### 🎨 UI / UX
+- Interface premium façon travel-app
+- Animations naturelles
+- Images HD
+- Navigation fluide
+
 ---
-## 🏠 Home Page
 
-Affichage personnalisé : Hello, username 👋
+## 🧠 Logique générale (simplifiée)
 
-Avatar cliquable pour le changer à tout moment
-
-Barre de recherche intelligente
-
-Recherche par ville ou pays
-
-Message d’erreur si aucune correspondance
-
-Filtrage dynamique par continent
-
-Tri par pays ou continent
----
-## ❤️ Gestion des Favoris
-
-Ajouter / retirer n’importe quelle destination
-
-Sélection multiple
-
-Suppression groupée
-
-Tri par :
-
-Ville
-
-Pays
-
-Continent
-
-Note
-
-Aucun tri
-
-Ajout de favoris directement depuis un bottom-sheet
----
-## 🗺️ Page Détails
-
-Hero animation
-
-Description courte et longue (Read more / Read less)
-
-Liste “Upcoming Tours” dynamique
-
-Bouton “Random City” 🎲
-
-Bottom sheet pour afficher toutes les destinations
----
-## 🎨 UI / UX
-
-Design moderne inspiré Travel Apps
-
-Animations Flutter
-
-Images optimisées
-
-Thème cohérent
+```mermaid
+flowchart TD
+A[Login / Signup] --> B[Accueil : recherche + filtres]
+B --> C[Système de favoris]
+C --> D[Page détail]
+D --> E[Random destination]
+E --> B
+```
 ---
 ## 📂 Arborescence du projet
 tripGuide/
