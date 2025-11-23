@@ -189,6 +189,4 @@ Decaho Gbegbe
 🐙 GitHub : https://github.com/Decaho7059
 
 📜 Licence
-
-Ce projet n’a pas encore de licence.
-Tu peux ajouter la licence MIT si tu veux rendre le projet open-source.
+MIT License
