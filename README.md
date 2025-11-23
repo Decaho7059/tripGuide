@@ -1,15 +1,15 @@
 ![Banner](./demo/banner.png)
 
-🧭 TripGuide — Flutter Travel App
+# 🧭 TripGuide — Flutter Travel App
 
-Une application mobile moderne de découverte de destinations, avec système de favoris, filtres, recherche intelligente, authentification personnalisée et avatars dynamiques.
+**Une application mobile moderne de découverte de destinations, avec système de favoris, filtres, recherche intelligente, authentification personnalisée et avatars dynamiques.**
+---
 
-🌟 Aperçu du projet
+## 🌟 Aperçu du projet
 
-🎬 Démo de l’application :
-(Ajoute tes GIF une fois générés)
+ **Démo de l’application :**
 
-Connexion / Inscription
+**Connexion / Inscription**
 
 ![Login](./demo/tripGuide_login.gif)
 
@@ -17,8 +17,8 @@ Connexion / Inscription
 Navigation + Recherche + Favoris
 
 ![Demo](./demo/tripGuide_app.gif)
-
-✨ Fonctionnalités principales
+---
+## ✨ Fonctionnalités principales
 🔐 Authentification
 
 Connexion & inscription fluides
@@ -28,8 +28,8 @@ Choix du genre (Homme / Femme)
 Sélection d’un avatar parmi tous les fichiers d’un dossier
 
 Nom d’utilisateur nettoyé (sans caractères spéciaux)
-
-🏠 Home Page
+---
+## 🏠 Home Page
 
 Affichage personnalisé : Hello, username 👋
 
@@ -44,8 +44,8 @@ Message d’erreur si aucune correspondance
 Filtrage dynamique par continent
 
 Tri par pays ou continent
-
-❤️ Gestion des Favoris
+---
+## ❤️ Gestion des Favoris
 
 Ajouter / retirer n’importe quelle destination
 
@@ -66,8 +66,8 @@ Note
 Aucun tri
 
 Ajout de favoris directement depuis un bottom-sheet
-
-🗺️ Page Détails
+---
+## 🗺️ Page Détails
 
 Hero animation
 
@@ -78,8 +78,8 @@ Liste “Upcoming Tours” dynamique
 Bouton “Random City” 🎲
 
 Bottom sheet pour afficher toutes les destinations
-
-🎨 UI / UX
+---
+## 🎨 UI / UX
 
 Design moderne inspiré Travel Apps
 
@@ -88,8 +88,8 @@ Animations Flutter
 Images optimisées
 
 Thème cohérent
-
-📂 Arborescence du projet
+---
+## 📂 Arborescence du projet
 tripGuide/
 │
 ├── lib/
@@ -128,8 +128,8 @@ tripGuide/
 │
 ├── pubspec.yaml
 └── README.md
-
-🚀 Installation
+---
+## 🚀 Installation
 1️⃣ Cloner le projet
 git clone https://github.com/decaho/tripGuide.git
 cd tripGuide
@@ -139,8 +139,8 @@ flutter pub get
 
 3️⃣ Lancer l’application
 flutter run
-
-🛠️ Technologies utilisées
+---
+## 🛠️ Technologies utilisées
 
 Flutter 3.x
 
@@ -155,8 +155,8 @@ ValueNotifier (gestion des favoris)
 AssetManifest.json (chargement automatique des avatars)
 
 Material Design
-
-🔥 Points forts techniques
+---
+## 🔥 Points forts techniques
 ✔ Avatar dynamique via AssetManifest
 
 Aucune liste statique → toutes les images d’un dossier sont automatiquement chargées.
@@ -168,7 +168,8 @@ Avec ValueNotifier<Set<String>>
 
 ✔ Navigation propre avec onGenerateRoute
 ✔ Système de tri et filtres combinés (continent + recherche + tri)
-💡 Améliorations possibles
+---
+## 💡 Améliorations futures
 
 Ajouter Firebase Auth
 
@@ -179,14 +180,14 @@ Ajouter un mode sombre
 Ajouter la géolocalisation
 
 Intégrer une API météo ou Google Places
-
-👨‍💻 Auteur
+---
+## 👨‍💻 Auteur
 
 Decaho Gbegbe
 🧑‍🎓 Baccalauréat en Génie Informatique — Université d’Ottawa
 🔗 LinkedIn : https://linkedin.com/in/decahogbegbe
 
 🐙 GitHub : https://github.com/Decaho7059
-
-📜 Licence
+---
+## 📜 Licence
 MIT License
