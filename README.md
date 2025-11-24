@@ -1,9 +1,22 @@
 # 🌍 TripGuide — Explore The World in One App  
 
+![Flutter](https://img.shields.io/badge/Flutter-3.19-blue)
+![Dart](https://img.shields.io/badge/Dart-3.0-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
 > **Application Flutter moderne permettant d’explorer des destinations, filtrer par continent/pays, gérer ses favoris et personnaliser son profil (avatar + nom).**
 
 ---
 
+## 📑 Sommaire
+- [Aperçu](#-aperçu-de-lapplication)
+- [Fonctionnalités](#-fonctionnalités-principales)
+- [Technologies](#-outils-et-technologies-utilisés)
+- [Arborescence](#-arborescence-du-projet)
+- [Installation](#-installation)
+- [Roadmap](#-améliorations-futures)
+
+---
 
 ## 🧭 Aperçu de l’application
 
