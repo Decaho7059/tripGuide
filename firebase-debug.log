@@ -1,0 +1,148 @@
+[debug] [2025-11-24T06:03:59.206Z] ----------------------------------------------------------------------
+[debug] [2025-11-24T06:03:59.209Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Decaho\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-11-24T06:03:59.210Z] CLI Version:   14.26.0
+[debug] [2025-11-24T06:03:59.210Z] Platform:      win32
+[debug] [2025-11-24T06:03:59.210Z] Node Version:  v20.17.0
+[debug] [2025-11-24T06:03:59.210Z] Time:          Mon Nov 24 2025 01:03:59 GMT-0500 (heure normale de l’Est)
+[debug] [2025-11-24T06:03:59.211Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-24T06:03:59.214Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Decaho\Documents\GitHub\tripGuide
+
+[debug] [2025-11-24T06:03:59.411Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-11-24T06:03:59.411Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2025-11-24T06:05:49.681Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-24T06:05:49.681Z] > authorizing via signed-in user (g.decaho@gmail.com)
+[debug] [2025-11-24T06:05:49.682Z] Checked if tokens are valid: false, expires at: 1732071574724
+[debug] [2025-11-24T06:05:49.682Z] Checked if tokens are valid: false, expires at: 1732071574724
+[debug] [2025-11-24T06:05:49.682Z] > refreshing access token with scopes: []
+[debug] [2025-11-24T06:05:49.683Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-24T06:05:49.683Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-24T06:05:49.812Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-11-24T06:05:49.812Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-24T06:05:49.813Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-11-24T06:05:49.936Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 401
+[debug] [2025-11-24T06:05:49.937Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2025-11-24T06:05:49.937Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2025-11-24T06:05:49.937Z] Checked if tokens are valid: false, expires at: 1732071574724
+[debug] [2025-11-24T06:05:49.937Z] Checked if tokens are valid: false, expires at: 1732071574724
+[debug] [2025-11-24T06:05:49.937Z] > refreshing access token with scopes: []
+[debug] [2025-11-24T06:05:49.937Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-24T06:05:49.937Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-24T06:05:50.013Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-11-24T06:05:50.013Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-24T06:05:50.015Z] Request to https://firebase.googleapis.com/v1beta1/projects?pageSize=100 had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2025-11-24T06:05:50.109Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects?pageSize=100 had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\Decaho\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\Decaho\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:322:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2025-11-24T06:06:30.054Z] ----------------------------------------------------------------------
+[debug] [2025-11-24T06:06:30.059Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Decaho\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-11-24T06:06:30.060Z] CLI Version:   14.26.0
+[debug] [2025-11-24T06:06:30.060Z] Platform:      win32
+[debug] [2025-11-24T06:06:30.061Z] Node Version:  v20.17.0
+[debug] [2025-11-24T06:06:30.061Z] Time:          Mon Nov 24 2025 01:06:30 GMT-0500 (heure normale de l’Est)
+[debug] [2025-11-24T06:06:30.061Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Decaho\Documents\GitHub\tripGuide
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2025-11-24T06:06:54.084Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-24T06:06:54.084Z] > authorizing via signed-in user (g.decaho@gmail.com)
+[debug] [2025-11-24T06:06:54.085Z] Checked if tokens are valid: false, expires at: 1732071574724
+[debug] [2025-11-24T06:06:54.086Z] Checked if tokens are valid: false, expires at: 1732071574724
+[debug] [2025-11-24T06:06:54.086Z] > refreshing access token with scopes: []
+[debug] [2025-11-24T06:06:54.087Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-24T06:06:54.088Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-24T06:06:54.273Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-11-24T06:06:54.273Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-24T06:06:54.274Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2025-11-24T06:06:54.471Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 401
+[debug] [2025-11-24T06:06:54.472Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2025-11-24T06:06:54.472Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2025-11-24T06:06:54.472Z] Checked if tokens are valid: false, expires at: 1732071574724
+[debug] [2025-11-24T06:06:54.472Z] Checked if tokens are valid: false, expires at: 1732071574724
+[debug] [2025-11-24T06:06:54.472Z] > refreshing access token with scopes: []
+[debug] [2025-11-24T06:06:54.472Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-24T06:06:54.472Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-24T06:06:54.535Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-11-24T06:06:54.535Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-24T06:06:54.537Z] Request to https://firebase.googleapis.com/v1beta1/availableProjects?pageSize=100 had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2025-11-24T06:06:54.629Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/availableProjects?pageSize=100 had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\Decaho\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\Decaho\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:322:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to list available Google Cloud Platform projects. See firebase-debug.log for more info.
+[debug] [2025-11-24T06:07:05.443Z] ----------------------------------------------------------------------
+[debug] [2025-11-24T06:07:05.446Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Decaho\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-11-24T06:07:05.447Z] CLI Version:   14.26.0
+[debug] [2025-11-24T06:07:05.447Z] Platform:      win32
+[debug] [2025-11-24T06:07:05.447Z] Node Version:  v20.17.0
+[debug] [2025-11-24T06:07:05.447Z] Time:          Mon Nov 24 2025 01:07:05 GMT-0500 (heure normale de l’Est)
+[debug] [2025-11-24T06:07:05.447Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Decaho\Documents\GitHub\tripGuide
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-11-24T06:07:12.122Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-24T06:07:12.123Z] > authorizing via signed-in user (g.decaho@gmail.com)
+[debug] [2025-11-24T06:07:49.333Z] ExitPromptError: User force closed the prompt with SIGINT
+    at Interface.sigint (C:\Users\Decaho\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:101:37)
+    at Interface.emit (node:events:519:28)
+    at Interface.emit (node:domain:488:12)
+    at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1126:18)
+    at ReadStream.onkeypress (node:internal/readline/interface:265:20)
+    at ReadStream.emit (node:events:531:35)
+    at ReadStream.emit (node:domain:488:12)
+    at emitKeys (node:internal/readline/utils:371:14)
+    at emitKeys.next (<anonymous>)
+    at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+[error] 
+[error] Error: An unexpected error has occurred.
