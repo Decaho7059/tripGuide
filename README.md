@@ -36,7 +36,7 @@ Navigation + Recherche + Favoris
 
 ## ✨ Fonctionnalités principales
 
-### 🔐 Authentification & Profil
+## 🔐 Authentification & Profil
 - Connexion / Inscription
 - Choix du genre (Homme / Femme)
 - Sélection d’un avatar (Naruto, personnages animés, etc.)
@@ -51,7 +51,7 @@ Navigation + Recherche + Favoris
 - Tri : pays, continent, aucun tri
 - Listing animé et responsive
 
-### ❤️ Favoris
+## ❤️ Favoris
 - Ajouter / retirer une destination
 - Sélection multiple
 - Suppression groupée
@@ -59,7 +59,7 @@ Navigation + Recherche + Favoris
 - Ajout ou retrait via bottom-sheet
 - Stocké via `ValueNotifier` (réactif et instantané)
 
-### 📄 Page Détails
+## 📄 Page Détails
 - Hero animation
 - Flag + pays + reviews + rating
 - Description courte + longue (Read More)
@@ -67,7 +67,7 @@ Navigation + Recherche + Favoris
 - Liste de destinations mélangées
 - Random destination (boutton 🎲)
 
-### 🎨 UI / UX
+## 🎨 UI / UX
 - Interface premium façon travel-app
 - Animations naturelles
 - Images HD
@@ -85,8 +85,30 @@ C --> D[Page détail]
 D --> E[Random destination]
 E --> B
 ```
+
+## 🧰 Outils et technologies utilisés
+
+| 🧩 **Technologie** | ⚙️ **Utilisation** |
+|--------------------|--------------------|
+| 🐦 **Flutter 3.35+ / Dart** | Framework principal |
+| 🎨 **Material Design** | UI moderne : boutons, cards, inputs, animations |
+| 📁 **AssetManifest.json** | Chargement automatique de tous les avatars du dossier images/avatar/ |
+| ❤️ **ValueNotifier** | Réactivité instantanée du système de favoris (ajout/retrait sans refresh) |
+| 🔍 **Filtering & Sorting** | Recherche dynamique + tri par pays/continent/note |
+| 🖼️ **Hero Animations** | Transitions fluides entre Home → DetailPage |
+| 📦 **Bottom Sheets modaux** | Sélecteur d’avatar, tri, ajout/retrait de favoris |
+| 🌀 **Animated Widgets** | Animations douces sur le scroll et certaines transitions |
+| 🧭 **Navigator 1.0** | Navigation entre les différentes pages |
+| 🗂️ **Architecture modulaire** | Séparation propre du code : Home, Login, Favorites, Manager, Detail, etc. |
+| 🎛️ **Sliver / Grid / ListView** | Affichage responsive des destinations, avatars et favoris |
+| ♻️ **Random + Shuffle** | Génération de destinations aléatoires dans "Upcoming Tours" |
+| 🖱️ **GestureDetector** | Interaction (clic avatar → changement, clic cœur → favoris) |
+
 ---
+
 ## 📂 Arborescence du projet
+
+```markdown
 tripGuide/
 │
 ├── lib/
@@ -125,35 +147,27 @@ tripGuide/
 │
 ├── pubspec.yaml
 └── README.md
----
+```
+
 ## 🚀 Installation
-1️⃣ Cloner le projet
+###1️⃣ Cloner le projet
+```bash
 git clone https://github.com/decaho/tripGuide.git
 cd tripGuide
+```
 
-2️⃣ Installer les dépendances
+###2️⃣ Installer les dépendances
+```bash
 flutter pub get
+```
 
-3️⃣ Lancer l’application
+###3️⃣ Lancer l’application
+```bash
 flutter run
----
-## 🛠️ Technologies utilisées
+```
 
-Flutter 3.x
-
-Dart
-
-Animations Flutter
-
-Hero animations
-
-ValueNotifier (gestion des favoris)
-
-AssetManifest.json (chargement automatique des avatars)
-
-Material Design
----
 ## 🔥 Points forts techniques
+```bash
 ✔ Avatar dynamique via AssetManifest
 
 Aucune liste statique → toutes les images d’un dossier sont automatiquement chargées.
@@ -165,9 +179,11 @@ Avec ValueNotifier<Set<String>>
 
 ✔ Navigation propre avec onGenerateRoute
 ✔ Système de tri et filtres combinés (continent + recherche + tri)
+```
 ---
-## 💡 Améliorations futures
 
+### 💡 Améliorations futures
+```bash
 Ajouter Firebase Auth
 
 Sauvegarder les favoris dans Firestore
@@ -177,14 +193,16 @@ Ajouter un mode sombre
 Ajouter la géolocalisation
 
 Intégrer une API météo ou Google Places
----
-## 👨‍💻 Auteur
+```
 
+
+## 👨‍💻 Auteur
+```bash
 Decaho Gbegbe
 🧑‍🎓 Baccalauréat en Génie Informatique — Université d’Ottawa
 🔗 LinkedIn : https://linkedin.com/in/decahogbegbe
-
 🐙 GitHub : https://github.com/Decaho7059
----
+```
+
 ## 📜 Licence
 MIT License
