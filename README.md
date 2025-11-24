@@ -36,15 +36,21 @@ Cette application offre une expérience fluide, intuitive, et visuellement élé
 
  **Démo de l’application :**
 
+**Screen**
+![Demo](./images/screen/screen1.png)
+![Demo](./images/screen/screen2.png)
+
+---
+
 **Connexion / Inscription**
 
-![Gameplay Login](tripGuide_login.gif)
+![Gameplay Login](./images/screen/tripGuide_login.gif)
 
 --- 
 
 Navigation + Recherche + Favoris
 
-![Gameplay Test](tripGuide_test.gif)
+![Gameplay Test](./images/screen/tripGuide_test.gif)
 
 ---
 
