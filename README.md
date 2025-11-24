@@ -36,7 +36,7 @@ Navigation + Recherche + Favoris
 
 ## ✨ Fonctionnalités principales
 
-## 🔐 Authentification & Profil
+### 🔐 Authentification & Profil
 - Connexion / Inscription
 - Choix du genre (Homme / Femme)
 - Sélection d’un avatar (Naruto, personnages animés, etc.)
@@ -51,7 +51,7 @@ Navigation + Recherche + Favoris
 - Tri : pays, continent, aucun tri
 - Listing animé et responsive
 
-## ❤️ Favoris
+### ❤️ Favoris
 - Ajouter / retirer une destination
 - Sélection multiple
 - Suppression groupée
@@ -59,7 +59,7 @@ Navigation + Recherche + Favoris
 - Ajout ou retrait via bottom-sheet
 - Stocké via `ValueNotifier` (réactif et instantané)
 
-## 📄 Page Détails
+### 📄 Page Détails
 - Hero animation
 - Flag + pays + reviews + rating
 - Description courte + longue (Read More)
@@ -67,7 +67,7 @@ Navigation + Recherche + Favoris
 - Liste de destinations mélangées
 - Random destination (boutton 🎲)
 
-## 🎨 UI / UX
+### 🎨 UI / UX
 - Interface premium façon travel-app
 - Animations naturelles
 - Images HD
