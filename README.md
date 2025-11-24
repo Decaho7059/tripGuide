@@ -1,192 +1,222 @@
-🌍 TripGuide – Flutter Travel App
+# 🌍 TripGuide — Explore The World in One App  
 
-Une application mobile moderne pour explorer le monde, découvrir des destinations et gérer vos favoris avec une interface intuitive et animée.
+![Flutter](https://img.shields.io/badge/Flutter-3.19-blue)
+![Dart](https://img.shields.io/badge/Dart-3.0-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-<div align="center"> <img src="images/demo/tripguide_demo.gif" width="350"/> </div>
-📌 Sommaire
+> **Application Flutter moderne permettant d’explorer des destinations, filtrer par continent/pays, gérer ses favoris et personnaliser son profil (avatar + nom).**
 
-Aperçu
+---
 
-Fonctionnalités
+## 📑 Sommaire
+- [Aperçu](#-aperçu-de-lapplication)
+- [Fonctionnalités](#-fonctionnalités-principales)
+- [Technologies](#-outils-et-technologies-utilisés)
+- [Arborescence](#-arborescence-du-projet)
+- [Installation](#-installation)
+- [Roadmap](#-améliorations-futures)
 
-Démo
+---
 
-Arborescence du Projet
+## 🧭 Aperçu de l’application
 
-Installation
+<img src="images/avatar/boy.png" width="100" align="left" />
 
-Technologies
+**TripGuide** est une travel-app moderne développée en **Flutter/Dart**, combinant :
+- un système **Login / Sign up** complet,
+- un **choix d’avatar dynamique** (les avatars sont chargés automatiquement depuis `images/avatar/`),
+- des pages animées et un design premium,
+- un système de **favoris avancé** (tri, ajout, suppression multiple),
+- une page détail immersive avec **"Read more"**, et des **tours recommandés**,
+- une fonctionnalité **Random Destination 🎲**.
 
-Captures d’écran
+Cette application offre une expérience fluide, intuitive, et visuellement élégante.
 
-Auteur
+---
 
-Licence
+ **Démo de l’application :**
 
-🚀 Aperçu
+**Connexion / Inscription**
 
-TripGuide est une application mobile développée en Flutter permettant :
+![Gameplay Login](tripGuide_login.gif)
 
-de parcourir des destinations du monde entier,
+--- 
 
-de filtrer par continent,
+Navigation + Recherche + Favoris
 
-de rechercher villes ou pays,
+![Gameplay Test](tripGuide_test.gif)
 
-d’ajouter des favoris,
+---
 
-de gérer son profil (avatar, pseudonyme),
+## ✨ Fonctionnalités principales
 
-de consulter des détails enrichis avec animations.
+### 🔐 Authentification & Profil
+- Connexion / Inscription
+- Choix du genre (Homme / Femme)
+- Sélection d’un avatar (Naruto, personnages animés, etc.)
+- Avatar modifiable à tout moment
+- Nettoyage intelligent du nom (autorise lettres, chiffres, @ et .)
 
-L’application inclut une interface moderne, des animations fluides et une navigation intuitive.
+### 🏠 Accueil
+- Message personnalisé : *Hello, Username*
+- Recherche intelligente (ville ou pays)
+- Message d’erreur si aucun résultat
+- Filtrage dynamique par continent
+- Tri : pays, continent, aucun tri
+- Listing animé et responsive
 
-✨ Fonctionnalités
-🔍 Recherche intelligente
+### ❤️ Favoris
+- Ajouter / retirer une destination
+- Sélection multiple
+- Suppression groupée
+- Tri intelligent : ville / pays / continent / note
+- Ajout ou retrait via bottom-sheet
+- Stocké via `ValueNotifier` (réactif et instantané)
 
-Recherche une destination par ville ou pays
+### 📄 Page Détails
+- Hero animation
+- Flag + pays + reviews + rating
+- Description courte + longue (Read More)
+- Section "Upcoming tours"
+- Liste de destinations mélangées
+- Random destination (boutton 🎲)
 
-Avertissement si aucun résultat trouvé
+### 🎨 UI / UX
+- Interface premium façon travel-app
+- Animations naturelles
+- Images HD
+- Navigation fluide
 
-🌎 Filtres & Tri
+---
 
-Filtre par continent
+## 🧠 Logique générale (simplifiée)
 
-Tri par pays, continent, ou réinitialisation
+```mermaid
+flowchart TD
+A[Login / Signup] --> B[Accueil : recherche + filtres]
+B --> C[Système de favoris]
+C --> D[Page détail]
+D --> E[Random destination]
+E --> B
+```
 
-❤️ Gestion des favoris
+## 🧰 Outils et technologies utilisés
 
-Ajouter / retirer une destination
+| 🧩 **Technologie** | ⚙️ **Utilisation** |
+|--------------------|--------------------|
+| 🐦 **Flutter 3.35+ / Dart** | Framework principal |
+| 🎨 **Material Design** | UI moderne : boutons, cards, inputs, animations |
+| 📁 **AssetManifest.json** | Chargement automatique de tous les avatars du dossier images/avatar/ |
+| ❤️ **ValueNotifier** | Réactivité instantanée du système de favoris (ajout/retrait sans refresh) |
+| 🔍 **Filtering & Sorting** | Recherche dynamique + tri par pays/continent/note |
+| 🖼️ **Hero Animations** | Transitions fluides entre Home → DetailPage |
+| 📦 **Bottom Sheets modaux** | Sélecteur d’avatar, tri, ajout/retrait de favoris |
+| 🌀 **Animated Widgets** | Animations douces sur le scroll et certaines transitions |
+| 🧭 **Navigator 1.0** | Navigation entre les différentes pages |
+| 🗂️ **Architecture modulaire** | Séparation propre du code : Home, Login, Favorites, Manager, Detail, etc. |
+| 🎛️ **Sliver / Grid / ListView** | Affichage responsive des destinations, avatars et favoris |
+| ♻️ **Random + Shuffle** | Génération de destinations aléatoires dans "Upcoming Tours" |
+| 🖱️ **GestureDetector** | Interaction (clic avatar → changement, clic cœur → favoris) |
 
-Voir la page Favoris
+---
 
-Sélection multiple (option disponible)
+## 📂 Arborescence du projet
 
-Tri personnalisé
-
-👤 Profil utilisateur
-
-Inscription + connexion
-
-Choix du genre
-
-Sélection d’un avatar dans une liste complète
-
-Modification de l’avatar directement depuis la Home
-
-📱 Pages clés
-
-Home
-
-Favorites
-
-About
-
-Detail Page
-
-Login / Sign up
-
-🎬 Démo GIF
-
-Ajoute un GIF dans /images/demo/tripguide_demo.gif
-
-Exemple :
-
-![Demo TripGuide](images/demo/tripguide_demo.gif)
-
-📁 Arborescence du Projet
-
-Voici la structure recommandée :
-
-flutter_weather_app/
-│
-├── images/
-│   ├── filter.png
-│   ├── world.gif
-│   ├── newton.gif
-│   ├── avatar/
-│   │   ├── boy.png
-│   │   ├── girl.png
-│   │   ├── gaara.png
-│   │   ├── itachi.png
-│   │   ├── hinata.png
-│   │   ├── kurama.png
-│   │   ├── madara.png
-│   │   ├── nagato.png
-│   │   ├── orochimaru.png
-│   │   └── pain.png
-│   ├── villes/
-│   └── Pays/
+```markdown
+tripGuide/
 │
 ├── lib/
 │   ├── main.dart
 │   ├── services/
-│   │   └── support_widget.dart
+│   │     └── support_widget.dart
 │   ├── pages/
-│   │   ├── login/
-│   │   │   ├── auth_page.dart
-│   │   │   ├── user_profile.dart
-│   │   ├── home.dart
-│   │   ├── about_page.dart
-│   │   ├── favorites_page.dart
-│   │   ├── favorites_manager.dart
-│   │   ├── detail_page.dart
-│   │   └── destinations_data.dart
+│   │     ├── home.dart
+│   │     ├── detail_page.dart
+│   │     ├── favorites_page.dart
+│   │     ├── favorites_manager.dart
+│   │     ├── about_page.dart
+│   │     ├── destinations_data.dart
+│   │     └── login/
+│   │            ├── auth_page.dart
+│   │            └── user_profile.dart
+│   │
+│
+├── images/
+│   ├── avatar/
+│   │     ├── boy.png
+│   │     ├── girl.png
+│   │     ├── gaara.png
+│   │     ├── itachi.png
+│   │     ├── madara.png
+│   │     ├── nagato.png
+│   │     ├── pain.png
+│   │     ├── kurama.png
+│   │     └── hinata.png
+│   │
+│   ├── villes/
+│   ├── pays/
+│   ├── filter.png
+│   ├── world.gif
+│   └── newton.gif
 │
 ├── pubspec.yaml
 └── README.md
+```
 
-🛠 Installation
-1️⃣ Cloner le projet
-git clone https://github.com/tonpseudo/TripGuide.git
-cd TripGuide
+## 🚀 Installation
+###1️⃣ Cloner le projet
+```bash
+git clone https://github.com/decaho/tripGuide.git
+cd tripGuide
+```
 
-2️⃣ Installer les dépendances
+###2️⃣ Installer les dépendances
+```bash
 flutter pub get
+```
 
-3️⃣ Lancer l'application
+###3️⃣ Lancer l’application
+```bash
 flutter run
+```
 
-4️⃣ (Optionnel) Nettoyer le projet
-flutter clean
-flutter pub get
+## 🔥 Points forts techniques
+```bash
+✔ Avatar dynamique via AssetManifest
 
-⚙ Technologies
-Technologie	Utilisation
-Flutter 3	Framework mobile
-Dart	Langage principal
-Provider / ValueNotifier	Gestion simple de l’état
-Hero animations	Animations de transition
-Material Design 3	UI moderne
-AnimatedBottomNavigationBar	Navigation fluide
-🖼 Captures d’écran
+Aucune liste statique → toutes les images d’un dossier sont automatiquement chargées.
 
-Tu peux ajouter tes screenshots ici :
+✔ Favoris 100% en temps réel
 
-images/screens/home.png
-images/screens/detail.png
-images/screens/login.png
-images/screens/favorites.png
+Avec ValueNotifier<Set<String>>
+→ ultra rapide, sans base de données.
+
+✔ Navigation propre avec onGenerateRoute
+✔ Système de tri et filtres combinés (continent + recherche + tri)
+```
+---
+
+### 💡 Améliorations futures
+```bash
+Ajouter Firebase Auth
+
+Sauvegarder les favoris dans Firestore
+
+Ajouter un mode sombre
+
+Ajouter la géolocalisation
+
+Intégrer une API météo ou Google Places
+```
 
 
-Exemple :
-
-| Home | Détails | Favoris |
-|------|---------|---------|
-| ![](images/screens/home.png) | ![](images/screens/detail.png) | ![](images/screens/favorites.png) |
-
-👨‍💻 Auteur
-
+## 👨‍💻 Auteur
+```bash
 Decaho Gbegbe
-Baccalauréat en Génie Informatique – Université d’Ottawa (2025)
-
-📧 Email : decahoGbegbe@google.com
-
+🧑‍🎓 Baccalauréat en Génie Informatique — Université d’Ottawa
 🔗 LinkedIn : https://linkedin.com/in/decahogbegbe
-
 🐙 GitHub : https://github.com/Decaho7059
+```
 
-📜 Licence
-
-Ce projet est sous licence MIT.
-Vous êtes libre de l’utiliser, modifier et distribuer.
+## 📜 Licence
+MIT License
