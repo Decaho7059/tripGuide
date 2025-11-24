@@ -25,12 +25,13 @@ Cette application offre une expérience fluide, intuitive, et visuellement élé
 
 **Connexion / Inscription**
 
-![Login](./demo/tripGuide_login.gif)
+![Gameplay Login](tripGuide_login.gif)
 
+--- 
 
 Navigation + Recherche + Favoris
 
-![Demo](./demo/tripGuide_app.gif)
+![Gameplay Test](tripGuide_test.gif)
 
 ---
 
