@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_app/main.dart';
-import 'package:flutter_weather_app/pages/login/user_profile.dart';
+import 'package:flutter_tripguide_app/main.dart';
+import 'package:flutter_tripguide_app/pages/login/user_profile.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});

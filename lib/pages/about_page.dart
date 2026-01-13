@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_app/pages/auth_page.dart';
+import 'package:flutter_tripguide_app/pages/auth_page.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});

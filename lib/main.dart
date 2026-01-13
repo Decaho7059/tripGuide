@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_app/pages/home.dart';
-import 'package:flutter_weather_app/pages/favorites_page.dart';
-import 'package:flutter_weather_app/pages/about_page.dart';
-import 'package:flutter_weather_app/pages/detail_page.dart';
-import 'package:flutter_weather_app/pages/destinations_data.dart';
-import 'package:flutter_weather_app/pages/auth_page.dart';
-import 'package:flutter_weather_app/pages/login/user_profile.dart';
+import 'package:flutter_tripguide_app/pages/home.dart';
+import 'package:flutter_tripguide_app/pages/favorites_page.dart';
+import 'package:flutter_tripguide_app/pages/about_page.dart';
+import 'package:flutter_tripguide_app/pages/detail_page.dart';
+import 'package:flutter_tripguide_app/pages/destinations_data.dart';
+import 'package:flutter_tripguide_app/pages/auth_page.dart';
+import 'package:flutter_tripguide_app/pages/login/user_profile.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 
 void main() {

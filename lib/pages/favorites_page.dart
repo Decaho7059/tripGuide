@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_app/pages/destinations_data.dart';
-import 'package:flutter_weather_app/pages/detail_page.dart';
-import 'package:flutter_weather_app/pages/favorites_manager.dart';
+import 'package:flutter_tripguide_app/pages/destinations_data.dart';
+import 'package:flutter_tripguide_app/pages/detail_page.dart';
+import 'package:flutter_tripguide_app/pages/favorites_manager.dart';
 
 class FavoritesPage extends StatefulWidget {
   const FavoritesPage({super.key});

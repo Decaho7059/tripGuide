@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_weather_app/pages/destinations_data.dart';
-import 'package:flutter_weather_app/pages/detail_page.dart';
-import 'package:flutter_weather_app/pages/favorites_manager.dart';
-import 'package:flutter_weather_app/pages/login/user_profile.dart';
-import 'package:flutter_weather_app/services/support_widget.dart';
+import 'package:flutter_tripguide_app/pages/destinations_data.dart';
+import 'package:flutter_tripguide_app/pages/detail_page.dart';
+import 'package:flutter_tripguide_app/pages/favorites_manager.dart';
+import 'package:flutter_tripguide_app/pages/login/user_profile.dart';
+import 'package:flutter_tripguide_app/services/support_widget.dart';
 
 class Home extends StatefulWidget {
   final UserProfile userProfile;
