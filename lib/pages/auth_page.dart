@@ -23,7 +23,7 @@ class _AuthPageState extends State<AuthPage>
   final TextEditingController _loginNameController = TextEditingController();
 
   String _signupGender = 'male'; // 'male' ou 'female'
-  String _selectedAvatar = 'images/avatar/avatar1.png';
+  String _selectedAvatar = '';
 
   // Liste d’icônes au choix
   List<String> _avatars = [];
@@ -42,17 +42,23 @@ class _AuthPageState extends State<AuthPage>
 
     final Map<String, dynamic> manifestMap = json.decode(manifestContent);
 
+    final avatars = manifestMap.keys
+        .where((String path) => path.startsWith('images/avatar/'))
+        .where(
+          (String path) =>
+              path.endsWith('.png') ||
+              path.endsWith('.jpg') ||
+              path.toLowerCase().endsWith('.jpeg') ||
+              path.toLowerCase().endsWith('.webp'),
+        )
+        .toList();
+
     setState(() {
-      _avatars = manifestMap.keys
-          .where((String path) => path.startsWith('images/avatar/'))
-          .where(
-            (String path) =>
-                path.endsWith('.png') ||
-                path.endsWith('.jpg') ||
-                path.toLowerCase().endsWith('.jpeg') ||
-                path.toLowerCase().endsWith('.webp'),
-          )
-          .toList();
+      _avatars = avatars;
+      // Prend automatiquement le premier avatar disponible
+      if (avatars.isNotEmpty && _selectedAvatar.isEmpty) {
+        _selectedAvatar = avatars.first;
+      }
     });
   }
 
@@ -100,11 +106,12 @@ class _AuthPageState extends State<AuthPage>
       return;
     }
 
-    //avatar par défaut
     final profile = UserProfile(
       rawName: name,
-      gender: 'male',
-      avatarPath: 'images/avatar/boy.png',
+      gender: _signupGender,
+      avatarPath: _selectedAvatar.isNotEmpty
+          ? _selectedAvatar
+          : (_avatars.isNotEmpty ? _avatars.first : 'images/avatar/boy.png'),
     );
 
     _goToApp(profile);
